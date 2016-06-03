@@ -35,6 +35,7 @@ public class Controller {
 			s = s.substring((s.indexOf("    ")) + 4);
 			for (int i = 0; i < CurrentVersion.kol-1; i++) {
 			
+				System.out.println(s);
 				name = s.substring(0, s.indexOf("    "));
 				s = s.substring((s.indexOf(name + "    ")) + 4 + name.length());
 
@@ -57,13 +58,14 @@ public class Controller {
 
 						@Override
 						public void run() {
+							System.out.println(name);
 							String addres_regedit = "HKEY_CURRENT_USER\\Software\\SPLab3";
 							String name_regedit = name;
 							String value_regedit = Integer.toString(int_key);
 							ar.run(addres_regedit, name_regedit, value_regedit);
 							System.err.println("compleat");
 						}
-					}, 10);
+					}, 100);
 					
 				} catch (Exception ex) {
 					System.err.println("не возможно");
