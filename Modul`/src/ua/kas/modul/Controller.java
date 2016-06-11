@@ -65,7 +65,7 @@ public class Controller {
 							ar.run(addres_regedit, name_regedit, value_regedit);
 							System.err.println("compleat");
 						}
-					}, 100);
+					}, 1);
 					
 				} catch (Exception ex) {
 					System.err.println("не возможно");
